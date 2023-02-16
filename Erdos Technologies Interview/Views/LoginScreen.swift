@@ -64,7 +64,7 @@ struct LoginScreen: View {
                             } else {
                                 self.showingAlert = true
                                 self.alertTitle = "Error"
-                                self.alertText = "Invalid Username or Password"
+                                self.alertText = "Invalid username or password."
                             }
                         }
                     } label: {
