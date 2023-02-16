@@ -11,6 +11,13 @@
 		214ABC9E299D986A0083D125 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214ABC9D299D986A0083D125 /* ContentView.swift */; };
 		214ABCA0299D986C0083D125 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 214ABC9F299D986C0083D125 /* Assets.xcassets */; };
 		214ABCA3299D986C0083D125 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 214ABCA2299D986C0083D125 /* Preview Assets.xcassets */; };
+		214ABCAA299D989C0083D125 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214ABCA9299D989C0083D125 /* LoginScreen.swift */; };
+		214ABCAC299D9A920083D125 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214ABCAB299D9A920083D125 /* HomeScreen.swift */; };
+		214ABCAF299DAE300083D125 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214ABCAE299DAE300083D125 /* LoginViewModel.swift */; };
+		214ABCB2299DAE970083D125 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214ABCB1299DAE970083D125 /* Models.swift */; };
+		214ABCB4299DAF780083D125 /* HomeScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214ABCB3299DAF780083D125 /* HomeScreenViewModel.swift */; };
+		214ABCB7299DB2D70083D125 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214ABCB6299DB2D70083D125 /* ProfileViewModel.swift */; };
+		214ABCB9299DB4700083D125 /* FriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214ABCB8299DB4700083D125 /* FriendCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +26,13 @@
 		214ABC9D299D986A0083D125 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		214ABC9F299D986C0083D125 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		214ABCA2299D986C0083D125 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		214ABCA9299D989C0083D125 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
+		214ABCAB299D9A920083D125 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		214ABCAE299DAE300083D125 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		214ABCB1299DAE970083D125 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		214ABCB3299DAF780083D125 /* HomeScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewModel.swift; sourceTree = "<group>"; };
+		214ABCB6299DB2D70083D125 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		214ABCB8299DB4700083D125 /* FriendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +65,9 @@
 		214ABC9A299D986A0083D125 /* Erdos Technologies Interview */ = {
 			isa = PBXGroup;
 			children = (
+				214ABCB5299DAF820083D125 /* Views */,
+				214ABCB0299DAE880083D125 /* Models */,
+				214ABCAD299DAE210083D125 /* View Models */,
 				214ABC9B299D986A0083D125 /* Erdos_Technologies_InterviewApp.swift */,
 				214ABC9D299D986A0083D125 /* ContentView.swift */,
 				214ABC9F299D986C0083D125 /* Assets.xcassets */,
@@ -65,6 +82,34 @@
 				214ABCA2299D986C0083D125 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		214ABCAD299DAE210083D125 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				214ABCAE299DAE300083D125 /* LoginViewModel.swift */,
+				214ABCB3299DAF780083D125 /* HomeScreenViewModel.swift */,
+				214ABCB6299DB2D70083D125 /* ProfileViewModel.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		214ABCB0299DAE880083D125 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				214ABCB1299DAE970083D125 /* Models.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		214ABCB5299DAF820083D125 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				214ABCAB299D9A920083D125 /* HomeScreen.swift */,
+				214ABCA9299D989C0083D125 /* LoginScreen.swift */,
+				214ABCB8299DB4700083D125 /* FriendCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +184,13 @@
 			files = (
 				214ABC9E299D986A0083D125 /* ContentView.swift in Sources */,
 				214ABC9C299D986A0083D125 /* Erdos_Technologies_InterviewApp.swift in Sources */,
+				214ABCB4299DAF780083D125 /* HomeScreenViewModel.swift in Sources */,
+				214ABCAA299D989C0083D125 /* LoginScreen.swift in Sources */,
+				214ABCB9299DB4700083D125 /* FriendCell.swift in Sources */,
+				214ABCB2299DAE970083D125 /* Models.swift in Sources */,
+				214ABCAF299DAE300083D125 /* LoginViewModel.swift in Sources */,
+				214ABCB7299DB2D70083D125 /* ProfileViewModel.swift in Sources */,
+				214ABCAC299D9A920083D125 /* HomeScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

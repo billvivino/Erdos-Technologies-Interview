@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct Erdos_Technologies_InterviewApp: App {
+    @StateObject var profileViewModel = ProfileViewModel()
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(profileViewModel)
         }
     }
 }
