@@ -8,13 +8,18 @@
 import Foundation
 
 class ProfileViewModel: ObservableObject {
-    var userProfile: UserProfile = .empty
+    @Published var profile: UserProfile = .dummy
     
-    func fetchUserProfile(userName: String) {
-        
-    }
-    
-    func saveUserProfile(userName: String) {
-        
+    func fetchUserProfile(emailAddress: String, completion: @escaping(Bool)->Void) {
+        API.shared.fetchProfile(emailAddress) { result in
+            switch result {
+            case .success(let userProfile):
+                self.profile = userProfile
+                completion(true)
+            case .failure(let error):
+                print(error)
+                completion(false)
+            }
+        }
     }
 }

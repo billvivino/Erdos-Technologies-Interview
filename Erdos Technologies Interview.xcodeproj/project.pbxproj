@@ -18,6 +18,9 @@
 		214ABCB4299DAF780083D125 /* HomeScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214ABCB3299DAF780083D125 /* HomeScreenViewModel.swift */; };
 		214ABCB7299DB2D70083D125 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214ABCB6299DB2D70083D125 /* ProfileViewModel.swift */; };
 		214ABCB9299DB4700083D125 /* FriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214ABCB8299DB4700083D125 /* FriendCell.swift */; };
+		214ABCBB299DD1A30083D125 /* FriendDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214ABCBA299DD1A30083D125 /* FriendDetailView.swift */; };
+		214ABCBE299DD3660083D125 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214ABCBD299DD3660083D125 /* API.swift */; };
+		214ABCC1299DD5770083D125 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214ABCC0299DD5770083D125 /* Database.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +36,9 @@
 		214ABCB3299DAF780083D125 /* HomeScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewModel.swift; sourceTree = "<group>"; };
 		214ABCB6299DB2D70083D125 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		214ABCB8299DB4700083D125 /* FriendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCell.swift; sourceTree = "<group>"; };
+		214ABCBA299DD1A30083D125 /* FriendDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendDetailView.swift; sourceTree = "<group>"; };
+		214ABCBD299DD3660083D125 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		214ABCC0299DD5770083D125 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +71,8 @@
 		214ABC9A299D986A0083D125 /* Erdos Technologies Interview */ = {
 			isa = PBXGroup;
 			children = (
+				214ABCBF299DD56C0083D125 /* Database */,
+				214ABCBC299DD34C0083D125 /* API */,
 				214ABCB5299DAF820083D125 /* Views */,
 				214ABCB0299DAE880083D125 /* Models */,
 				214ABCAD299DAE210083D125 /* View Models */,
@@ -108,8 +116,25 @@
 				214ABCAB299D9A920083D125 /* HomeScreen.swift */,
 				214ABCA9299D989C0083D125 /* LoginScreen.swift */,
 				214ABCB8299DB4700083D125 /* FriendCell.swift */,
+				214ABCBA299DD1A30083D125 /* FriendDetailView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		214ABCBC299DD34C0083D125 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				214ABCBD299DD3660083D125 /* API.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		214ABCBF299DD56C0083D125 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				214ABCC0299DD5770083D125 /* Database.swift */,
+			);
+			path = Database;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,11 +207,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				214ABCBE299DD3660083D125 /* API.swift in Sources */,
 				214ABC9E299D986A0083D125 /* ContentView.swift in Sources */,
 				214ABC9C299D986A0083D125 /* Erdos_Technologies_InterviewApp.swift in Sources */,
 				214ABCB4299DAF780083D125 /* HomeScreenViewModel.swift in Sources */,
 				214ABCAA299D989C0083D125 /* LoginScreen.swift in Sources */,
 				214ABCB9299DB4700083D125 /* FriendCell.swift in Sources */,
+				214ABCC1299DD5770083D125 /* Database.swift in Sources */,
+				214ABCBB299DD1A30083D125 /* FriendDetailView.swift in Sources */,
 				214ABCB2299DAE970083D125 /* Models.swift in Sources */,
 				214ABCAF299DAE300083D125 /* LoginViewModel.swift in Sources */,
 				214ABCB7299DB2D70083D125 /* ProfileViewModel.swift in Sources */,

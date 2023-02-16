@@ -8,16 +8,20 @@
 import Foundation
 
 class LoginViewModel: ObservableObject {
-    var validUserNameAndPassWords: [UserNameAndPassWord] = [
-        UserNameAndPassWord(userName: "billvivino", password: "123456"),
-        UserNameAndPassWord(userName: "johnsmith", password: "654321")
-    ]
-    
-    func login(userName: String, password: String, completion: @escaping(Bool)->Void) {
-        if validUserNameAndPassWords.contains(where: {$0 == UserNameAndPassWord(userName: userName, password: password)}) {
-            completion(true)
-        } else {
-            completion(false)
+    @Published var isLoggedIn = false
+    func login(userName: String, password: String, completion: @escaping()->Void) {
+        API.shared.authenticate(userName, password) { success in
+            if success {
+                self.isLoggedIn = true
+                completion()
+            } else {
+                self.isLoggedIn = false
+                completion()
+            }
         }
+    }
+    
+    func logout() {
+        self.isLoggedIn = false
     }
 }

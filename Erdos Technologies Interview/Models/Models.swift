@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct UserProfile: Equatable {
+struct UserProfile: Equatable, Hashable {
     let id: String
     let firstName: String
     let lastName: String
@@ -15,10 +15,14 @@ struct UserProfile: Equatable {
     let profilePicDownloadUrl: String
     let pushNotificationToken: String
     
-    static var empty = Self(id: "", firstName: "John", lastName: "Smith", emailAddress: "jsmith@gmail.com", profilePicDownloadUrl: "https://picsum.photos/100/100", pushNotificationToken: "")
+    var name: String {
+        "\(firstName) \(lastName)"
+    }
+    
+    static var dummy = Self(id: "", firstName: "John", lastName: "Smith", emailAddress: "johnsmith@gmail.com", profilePicDownloadUrl: "https://picsum.photos/100/100", pushNotificationToken: "")
 }
 
-struct UserNameAndPassWord: Equatable {
-    let userName: String
+struct EmailAndPassword: Equatable {
+    let emailAddress: String
     let password: String
 }

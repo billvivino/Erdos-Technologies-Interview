@@ -8,9 +8,18 @@
 import Foundation
 
 class HomeScreenViewModel: ObservableObject {
-    var userFriendsList: [UserProfile] = Array(repeating: .empty, count: 10)
+    @Published var userFriendsList: [UserProfile] = []
     
-    func fetchFriends() {
-        
+    func fetchFriends(_ emailAddress: String, completion: @escaping(Bool)->Void) {
+        API.shared.fetchFriends(emailAddress) { result in
+            switch result {
+            case .success(let userFriendsList):
+                self.userFriendsList = userFriendsList
+                completion(true)
+            case .failure(let error):
+                print(error)
+                completion(false)
+            }
+        }
     }
 }

@@ -9,6 +9,8 @@ import SwiftUI
 
 struct FriendCell: View {
     @Binding var friend: UserProfile
+    @State var detailClicked = false
+    
     var body: some View {
         HStack (alignment: .top) {
             if let url = URL(string: friend.profilePicDownloadUrl) {
@@ -25,11 +27,17 @@ struct FriendCell: View {
             }.font(.body)
             Spacer()
         }.padding()
+            .navigationDestination(isPresented: $detailClicked) {
+                FriendDetailView(friend: $friend)
+            }
+            .onTapGesture {
+                self.detailClicked = true
+            }
     }
 }
 
 struct FriendCell_Previews: PreviewProvider {
     static var previews: some View {
-        FriendCell(friend: .constant(.empty))
+        FriendCell(friend: .constant(.dummy))
     }
 }
